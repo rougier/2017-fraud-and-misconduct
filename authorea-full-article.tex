@@ -1,0 +1,382 @@
+\documentclass[11pt,letter]{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{lineno}
+
+
+
+\usepackage{times}
+
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+
+
+
+\renewenvironment{abstract}
+  {{\bfseries\noindent{\large\abstractname}\par\nobreak}}
+  {}
+
+\renewenvironment{quote}
+  {\begin{tabular}{|p{13cm}}}
+  {\end{tabular}}
+
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1.5}{0pt}
+
+
+\usepackage{authblk}
+\makeatletter
+\renewcommand\AB@authnote[1]{\rlap{\textsuperscript{\normalfont#1}}}
+\renewcommand\Authsep{,~\,}
+\renewcommand\Authands{,~\,and }
+\makeatother
+
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\DeclareGraphicsExtensions{.pdf,.PDF,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+
+
+
+\newcommand{\msun}{\,\mathrm{M}_\odot} 
+
+\begin{document}
+
+\title{Ten Simple Rules for Scientific Fraud \& Misconduct}
+
+
+
+\author[1]{Nicolas P. Rougier}%
+\author[1]{john.timmer}%
+\affil[1]{Affiliation not available}%
+
+
+\vspace{-1em}
+
+
+
+  \date{\today}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+
+
+
+
+
+
+
+
+\section*{Introduction}
+
+So, here we are! You've decided to join the dark side of Science. That's great!
+You'll soon discover a brand new world of surprising results,
+non-replicable experiments, fabricated data, and funny statistics. But it's not without risks: fame and shame,
+retractions and lost grants, and... possibly jail. But you've made your choice, so now you need to know how to manage these risks. Only a few years ago, fraud and misconduct was a piece of
+cake (See the \href{https://en.wikipedia.org/wiki/The_Turk}{Mechanical Turk},
+\href{https://en.wikipedia.org/wiki/Charles_Redheffer}{Perpetual motion
+  machine}, \href{https://en.wikipedia.org/wiki/Great_Moon_Hoax}{Life on Moon},
+\href{https://en.wikipedia.org/wiki/Piltdown_Man}{Piltdown man},
+\href{https://en.wikipedia.org/wiki/Water_memory}{Water memory}). But there are lots of new players in town (\href{https://pubpeer.com}{PubPeer},
+\href{http://retractionwatch.com}{RetractionWatch},
+\href{https://forbetterscience.com}{For Better Science},
+\href{http://blogs.discovermagazine.com/neuroskeptic/}{Neuroskeptic} to name
+just a few) who have gotten pretty good at spotting and reporting fraudsters.
+Furthermore, publishers have started to arm themselves with high-tech tools, and your fellow scientists are willing to name and shame you \href{https://www.youtube.com/watch?v=FXaOqwanWnU/}{on social media}. To
+commit fraud or misconduct without getting caught in 2017 is a real
+challenge and requires serious dedication to your task. While you'll never be smarter than an entire community of scientists, we're generously giving you some
+simple rules to follow in your brand new career in fraud (see also \citep{timmer:2012}
+for a set of complementary rules). Of course, neither results or (lack of) consequences are 
+guaranteed.
+
+\textbf{Disclaimer} We obviously do not encourage scientific fraud nor misconduct. The goal of this article is to alert the reader to problems that have arisen in part due to the Publish or Perish imperative, which has driven a number of researchers to cross the Rubicon without the full appreciation of the consequences. Choosing fraud will hurt science, end careers, and could have impacts on life outside of the lab. If you're tempted (even  slightly) to beautify your results, keep in mind that the benefits are probably not worth the risks.
+
+\section*{Rule 1: Misrepresent, falsify, or fabricate your data}
+
+In order to start your life as a scientific fraudster, the
+first thing you need to do is learn how to convincingly
+misrepresent, falsify, or fabricate data. If you're still hesitant about
+embracing the dark side of science, you can start with a slight
+misrepresentation to support your hypothesis --- a hypothesis you're sure is right anyway. Some classic techniques are
+described in more detail below (see the seventh rule of \citep{rougier:2014}) but there are a number of others. If your data include numbers, there are \href{https://en.wikipedia.org/wiki/Misleading_graph}{many
+  techniques} for making a graph misleading \citep{wainer:1984,raschke:2008}. If you have images, you
+can change your results using
+software such as Photoshop or GIMP, which allow you to change pretty
+much anything in a figure \citep{cromey:2012, hendricks:2011}. But be careful, as an ever-growing number of
+journals are now using forensic software to spot image manipulation
+\citep{white:2007, rossner:2004,hsu:2015} (see also
+\href{http://journals.plos.org/ploscompbiol/s/figures#loc-image-manipulation}{PLoS
+  image manipulation recommendation} and \href{http://jcb.rupress.org/content/166/1/11}{Rockefeller University Press' discussion of the issue}). You can even test your whether your image has issues that could tip off an editor using the online tool \href{https://29a.ch/photo-forensics/#forensic-magnifier}{Forensically}
+by Jonas Wagner. This might dissuade you from manipulating your image, but don't worry --- there are plenty of other options available to you.\\
+
+
+None of the previous techniques will change the statistics of your
+data, so it might be good to consider your options here. Starting with real
+data, you only need to change a few points in order to take a non-significant
+result and turn it into something with an astoundingly highly significance. Just see what's possible using the
+\href{http://shinyapps.org/apps/p-hacker/}{p-hacker} application
+\citep{schonbrodt:2015} or the interactive applet from
+\citep{aschwanden:2015}. The advantage of tweaking real data is that the results  look both good and not very
+suspicious. The disadvantage is that it requires some real data in the first
+place, which means carrying out some actual experiments. Who wants that? Instead, you can fabricate an entire data set using software. With just a little programming skill, you can choose a correlation coefficient and X and Y mean/SD, and generate a data set with these precise
+statistics \citep{matejka:2017}. (Do not pick one of the datasaurus sets because if you
+plot it, it might attract the attention of an alert reader.) Whatever option you choose, make sure to
+have a backup story in case people start asking about the details of the experiments. A
+number of misconduct cases have been detected with just a few questions
+\citep{vastag:2006}.
+
+
+
+\section*{Rule 2: Hack your results}
+
+If you are reluctant to manipulate your data, you still have the option of
+searching through your results to find anything that reaches significance 
+(a.k.a. p-hacking). This can provide an appealing alternative to scientific misconduct. What is the p value of your NHST (Null Hypothesis
+Significance Test)? If it's close to your field's standard one of the many qualification
+proposed by
+\href{https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/}{Matthew
+  Hankins} to report your results? Can't you use expression such as {\em nearly
+  acceptable level of significance (p=0.06)}, {\em very closely brushed the
+  limit of statistical significance (p=0.051)} or {\em weakly statistically
+  significant (p=0.0557)}? While these statements don't make much sense, they might
+be sufficient to convince a naive reviewer or reader. 
+
+
+If you're
+suffering from a bi-polar p-value disorder, however (a term coined by
+\href{http://daniellakens.blogspot.fr/2014/05/the-probability-of-p-values-as-function.html}{Daniel
+  Lakens}), you'll want to reach the magical 0.05 threshold. It might be much easier than you think to portray your data as significant! The correct method for calculating the
+infamous p-value is barely understood by many students, teachers, and
+researchers \citep{haller:2002,lecoutre:2003}. The current situation is so bad that the American Statistical Association had to release a
+statement to explain p's correct usage \citep{wasserstein:2016,};
+Nature has issued a warning as well
+\citep{baker:2016}. Consequently, before hacking your results, it might be wise
+to re-read your classics
+\citep{simmons:2011,cumming:2012a,cumming:2012b,colquhoun:2014}. A warning for those of you in psychology: you have to take extra-precaution because this field has drawn attention for the unusual distribution of
+p-values smaller than 0.05 \citep{hartgerink:2016,bakker:2012}. There's now software called statcheck that can be used to recalculate the p values in your paper \citep{nuijten:2015,epskamp:2016}, making it difficult to get away with misleading statistics. Although some have called checking the results of others {\em
+  methodological terrorism} \citep{finske:2016}, it might be enough to scare some away from the dark side of Science.
+
+
+\section*{Rule 3: Copy/paste from others}
+
+It's not enough to have (fake) results; you still need to publish them if you want to gain fame (and tenure, and grants). Writing is a tedious task
+and can be a fair amount of work. Summarizing the state of the art in your
+field will force you to actually read about what your colleagues have been doing
+over the past few years. It is a very time consuming task. But in doing that reading, you may find that one of these
+colleagues wrote a nice introduction to the field or a wonderful summary of its current state. If so, why bother writing a new one? It's much simpler to copy/paste what he/she has written.  Plagiarism is the nuts and bolts of scientific misconduct
+\citep{neuroskeptic:2017}, be it literal copying, substantial copying or
+paraphrasing (see
+\href{https://www.elsevier.com/editors/perk/plagiarism-complaints}{definitions
+  from Elsevier} and the committee on publication ethics' (COPE) procedure for
+handle plagiarism in a
+\href{https://www.elsevier.com/__data/assets/pdf_file/0005/72815/plagiarism-A.pdf}{submitted}
+or
+\href{https://www.elsevier.com/__data/assets/pdf_file/0020/72830/plagiarism-B_0.pdf}{published}
+article). 
+
+Of course, you cannot literally take an excerpt from an
+article to insert it in yours. You'd run the risk of creating a situation where the reviewer found his own text in yours. Consequently, if you
+really intend to plagiarize, you'll need to transform the text drastically to
+avoid detection by humans \citep{dorigo:2015,} and more importantly, to avoid
+detection by dedicated software (e.g. iThenticate). This software is used by
+universities and journals for tracking people just like you. As the databases behind these services grow, plagiarism is becoming harder and harder. Even
+self-plagiarism is not allowed by a vast majority of scientific journals. All of this means that you have to be really innovative in your plagiarism techniques \citep{long:2009}. We've reached the point where writing your own text might be an easier option.
+
+\section*{Rule 4: Write your own peer-review}
+
+Even if you avoid all the pitfalls discussed above, you're in the clear yet. Depending on the
+journal you target, you may still encounter problems with the review
+process. If reviewers are picky, they may ask annoying questions,
+request more information or experiments, ask for a major revision and/or reject your submission entirely. Can you imagine how this would make you feel after all your hard work
+fabricating the data and plagiarized the article? There's even the risk that they'll notice your malpractice. Fortunately, there is a simple solution: write your
+own review! 
+
+It is surprisingly easy to do. As you submit, you will often be asked to give name of possible reviewers. Just
+provide phony names, along with email addresses that will be redirected to
+your mailbox. You will soon receive an invitation to review your own work, and you're then
+free to state how brilliant your own work is. Of
+course, you'll have to write a review that looks like an actual review. If
+you're Machiavellian, you can introduce some factual errors in your
+manuscript, then report them in your review, making it look thorough. Make sure not to send you review before the deadline because as
+\href{https://arstechnica.com/science/2017/04/107-cancer-papers-retracted-due-to-peer-review-fraud/}{reported
+  by Elizabeth Wager} \citep{stigbrand:2017}, editors have
+spotted fake reviews in part because reviewers responded promptly. Unfortunately, editors and
+publishers are now aware of the scam \citep{ferguson:2014} and  have
+taken counter-measures \citep{haug:2015}. For example, some of them no longer offer authors the option of recommending reviewers or if they do, the
+recommendation is restricted to a list of certified reviewers. If you insist on
+writing your own peer-review, you'll have to be creative and find new ways to
+game the system.
+
+
+
+\section*{Rule 5: Take advantage of predatory publishers}
+
+If you're worried that peer review will reveal your misconduct, you still have opportunities for publishing your results. There are many predatory publishers on
+the internet \citep{shen:2015}. These predators will
+publish just anything
+(see \href{https://en.wikipedia.org/wiki/International_Journal_of_Advanced_Computer_Technology#Publication_controversy}{``Get
+  Me Off Your Fucking Mailing List''} in the International Journal of Advanced
+Computer Technology (2005, 2014)) and you have a 100\% chance of publication with a lighting fast review - less than 24h for some
+journals. Finding a predatory publisher used to be easy thanks to a list
+created and maintained by Jeffrey Beal. Although not all researchers (and publishers)
+agreed with his categorization, this list provided an incredibly useful resource. Unfortunately, Beal's list was shut down just a few months ago
+\citep{straumsheim:2017} and the
+soon-to-be released replacement one will not be free \citep{silver:2017}. Still,
+you can take advantage of the
+\href{http://thinkchecksubmit.org}{Think/Check/Submit} website, which provides a
+easy-to-use checklist that researchers can refer to when they are investigating
+whether a journal is trustworthy. You'll obviously just want take the opposite of their sage recommendations --- like making sure \textbf{not} to pick a journal from the list of the 
+\href{https://oaspa.org}{Open Access Scholarly Publishers Association} since
+these journals have been thoroughly reviewed and can be trusted. Other anti-tips include finding a journal that none of your colleagues know about, looking for an editorial board that's made of
+unknown or non-existent people \citep{sorokowski:2017} or dogs \citep{kennedy:2017}, and finding a publisher without any address / email / telephone number. Of course, you
+will have to pay exorbitant fees to have your work published, but this is the
+price to pay to have an expedited and complacent review, assuming there's any review at
+all. Before making you decision where to publish, make sure to check
+for the retraction fees, which may be much higher than the initial publishing
+fees in some cases. But who wants to retract anyway?
+
+\section*{Rule 6: Don't give access to your code and data}
+
+You managed to have your article published, congratulations! You'll probably
+feel a bit of a buzz, and your astonishing conclusion may draw some
+newspaper headlines if your research is sexy enough. Don't get too excited about this, though. Attention means an increased chance that other researchers will start asking to access your
+material, assuming the publisher has not already requested it prior to
+publication. Of course, that's very bad news for you if your data
+has been fabricated or if your statistical analysis is not really academic. You definitely cannot give others access to your raw if it doesn't exist! Fortunately, researchers have been avoiding sharing their data for decades, and the same old
+reasons still apply
+\citep{roche:2014}: ``Oh you know, my data cannot be anonymized''; ``You
+would not understand the structure of my data''; ``A lot of money has been
+invested, I cannot give it for free''; etc. You can even tell anyone
+asking for your data that they are {\em a research parasite} \citep{longo:2016}
+although that approach seems to have drawn some unwanted attention
+(\url{http://researchparasite.com}).  Technological excuses might also be worth
+a try. When \citep{collberg:2014,collberg:2015} tried to access the code used in
+several publications, they get some really great answers: ``Too busy to help'';
+``Code will be available soon''; ``Bad backup practice''; etc. Just pick one
+you like. With the increasing pressure by funding bodies (NIH, NSF,
+Europe, etc) to share data, it might be good to pretend (and only pretend) to be a
+supporter of Open Data by inserting a simple ``data available upon request'' or
+``data is available from my website''. This does not come close to meeting the
+FAIR principles (findable, accessible, inter-operable, re-usable,
+\cite{wilkinson:2016}), but who cares if you can give the illusion you're not
+afraid of sharing your data? Don't get us wrong, though - you will never answer a
+request, and the data will never appear on your website.
+
+
+\section*{Rule 7: Do not allow for replication outside your lab}
+
+Here comes the tricky part: replication. It may surprise you, but some researchers
+may want to replicate your results using the methods explained in your
+article. \citep{nosek:2015} replicated 100 experiments reported in three high-ranking psychology journal. Or tried, at least; they
+concluded that some experiments were not replicable at all. There are even scientific journals that are now dedicated to replications
+(e.g. \url{http://rescience.github.io}). 
+
+If people try to replicate your work
+and do not get the same results, you have a problem. They may insist on seeing your actual
+data and, if you refuse, you might be suspected of
+fraud or misconduct. You can try rule 6, but if there are several failed replications, it will be much
+harder to deny access to your data. One easy way to avoid this sort of disaster is
+to claim in your article that the experiment/study has been already
+replicated in your lab. The subliminal message to the reader is ``Don't bother
+to replicate this, we've already taken care of that and it works, believe us. Don't
+waste your time, you will thank us later''. If this doesn't work, you can also
+try issuing a {\em Do Not Replicate order} as proposed by
+\href{https://mchankins.wordpress.com/2014/07/12/do-not-replicate/}{Matthew
+  Hankins} (who is kind enough as to provide a template). It is not yet widely
+used , but with the replication crisis we're facing, we're confident it will soon become popular.
+
+\section*{Rule 8: Never, ever, retract your results}
+
+If you've made a genuine (and big) mistake in your work, there is no problem in
+asking for the retraction of your paper  \citep{miller:2006}. It's a
+behavior that is actually rewarded according to \citep{lu:2013} (positive citation benefits for prior work), even though in some cases, it can take several years \citep{trivers:2009}. However, if you've been
+engaged in fraud, having your paper retracted is like an admission of guilt. It's something to be avoided. Retraction could start with a simple comment to the
+editor saying there may be a problem with you paper. If you're lucky, the comment will never be published
+\citep{trebino:2009}. Otherwise, you'll have to give a convincing answer, or the editor could decide to retract your paper
+without your consent. So it's critical to act quickly, defusing the crisis with a simple corrigendum admitting a bad - but not fatal - error during preparation of the publication.  Don't hesitate to publish as many corrigendum as
+necessary to make critics happy. You can drag this out for several years, which is hopefully enough time for people to forget about the issues.
+
+\section*{Rule 9: Don't get caught. Deny if caught.}
+
+If you intend to persist in a rogue scientific career, you have to be aware that
+you're likely to get caught sooner or later. The number of researcher to have never been caught is probably low; only the best can hope to be caught only after their death
+\citep{degroote:2016,}. But being caught while you're still breathing does not mean you career will come to
+an end. There is a set of simple rules to follow if you need to deny scientific misconduct:
+\begin{itemize}
+  \item If you're first author, explain you were supervised by the last author and
+    had no choice.
+  \item If you're last author, explain you were not aware of the misconduct of
+    the first author.
+  \item If your name is not first nor last, claim that you didn't even know your
+    name appeared in the publication.
+  \item If your name appears because of {\em gift authorship}, just admit it.
+    It might be considered misconduct, but fraud is much worse.
+  \item The intern, who cannot be contacted because he/she left academia, is
+    responsible for everything
+  \item Send threatening letters to those who have spotted your misconduct
+  \item Follow through on those threats and sue'em all
+\end{itemize}
+If you're lucky enough, one of the above will work and things should be back to
+normal. All of this is easier, of course, if you're supported by you employer because you've been
+labeled a rising star.
+
+\section*{Rule 10: Be creative (for once)}
+
+If you look at the annual list of
+\href{http://www.the-scientist.com/?articles.view/articleNo/47813/title/Top-10-Retractions-of-2016/}{top
+  ten retractions} compiled by Adam Marcus and Ivan Oransky (co-founders of the
+RetractionWatch), you'll realize that all the tactics mentioned above are
+already quite well known by the research community. If you want to stay off the radar
+while committing fraud and misconduct, you'll want to be creative and invent
+your own rules. 
+
+\section*{Conclusion}
+
+By following the simple rules above, you should get scientific glory if only temporarily. The downside is that it could be followed by jail time \citep{grant:2015}. A former researcher has been sentenced to
+57 months jail and to pay-back 7.2 millions dollars. Science has been and is
+still poisoned by fraud and misconduct, but it is now fighting back with increasingly high-tech tools \citep{buranyi:2017}. Today, the risks that come when you engage in
+fraud and misconduct are really high, and the chances of being
+caught have gone up. So you'd better think twice before committing misconduct, or
+your name will soon appear in Wikipedia's
+\href{https://en.wikipedia.org/wiki/Scientific_misconduct#Notable_individual_cases}{hall of shame}.
+
+\selectlanguage{english}
+\bibliographystyle{unsrt}
+\bibliography{bibliography/converted_to_latex.bib%
+}
+
+\end{document}
+
