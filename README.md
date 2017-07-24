@@ -1,4 +1,4 @@
-Ten Simple Rules for Scientific Fraud & Misconduct  
+**Ten Simple Rules for Scientific Fraud & Misconduct**  
 Nicolas P. Rougier and John Timmer
 
 We obviously do not encourage scientificfraud nor misconduct. The goal of this
