@@ -8,3 +8,5 @@ the Rubicon without the full appreciation of the consequences. Choosing fraud
 will hurt science, end careers, and could have impacts on life outside of the
 lab. If you're tempted (even slightly) to beautify your results, keep in mind
 that the benefits are probably not worth the risks.
+
+See https://hal.inria.fr/hal-01562601
